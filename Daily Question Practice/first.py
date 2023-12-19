@@ -124,3 +124,30 @@ def reverse_number(num):
 print(reverse_number(347)) #Output: 743
 
 #-------------------------------------------------------------------------
+#Q9 Write a python program for remove special charactor from string
+
+def remove_special_char(input_list):
+    special_chars = "!@#$%^&*()_+1234567890-="
+    clean_text = ""
+    for char in input_list:
+        if char not in special_chars:
+            clean_text += char
+    return clean_text
+
+my_list = "@2Krishna21"
+print(remove_special_char(my_list))
+
+#-------------------------------------------------------------------------
+#10 Write a python program for Reverse string
+
+def reverse_string(user_input):
+    result = ""
+    for char in user_input:
+        result = char + result
+    return result
+
+name = "Krishna"
+print(reverse_string(name))
+
+#-------------------------------------------------------------------------
+
