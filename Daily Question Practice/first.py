@@ -135,7 +135,7 @@ def remove_special_char(input_list):
     return clean_text
 
 my_list = "@2Krishna21"
-print(remove_special_char(my_list))
+print(remove_special_char(my_list)) #Output: Krishna
 
 #-------------------------------------------------------------------------
 #10 Write a python program for Reverse string
@@ -147,7 +147,24 @@ def reverse_string(user_input):
     return result
 
 name = "Krishna"
-print(reverse_string(name))
+print(reverse_string(name)) #Output: anhsirK
+
+#-------------------------------------------------------------------------
+#10 Write a python program for Reverse for Reverse a list
+
+def reverse_list(mylist):
+    start_index = 0
+    end_index = len(mylist)-1
+
+    while start_index < end_index:
+        mylist[start_index],mylist[end_index] = mylist[end_index],mylist[start_index]
+        start_index += 1
+        end_index -= 1
+
+    return mylist
+
+my_list = [12,15,16,1,7]
+print(reverse_list(my_list)) #Output: [7, 1, 16, 15, 12]
 
 #-------------------------------------------------------------------------
 
