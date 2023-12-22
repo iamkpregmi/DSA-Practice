@@ -11,7 +11,7 @@ orginal_list = [12,15,16,12,18,16,12,20]
 unique_values = remove_duplicate(orginal_list)
 print(unique_values) # Output: [12, 15, 16, 18, 20]
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #Q2 Check given number is prime or not
 
 def is_prime(number):
@@ -24,7 +24,7 @@ def is_prime(number):
 
 print(is_prime(11)) #Output: True
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #Q3 Calculate HCF(GCD) using Eucliden Algorithm.
 '''
 HCF: Highest Common Factor
@@ -38,7 +38,7 @@ def calculate_hcf(a,b):
 
 print(calculate_hcf(8,15)) #Output: 1
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #Q4 Calculate LCM(Lowest Common Multiple) using Euclidean Algorithm
 # Formula: LCM(a,b) = (a*b)/GCD(a,b)
 
@@ -47,7 +47,7 @@ def calculate_lcm(a,b):
 
 print(calculate_lcm(12,15)) #Output: 60
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #Q5 Count length of the list without using inbuild method
 
 def find_length(number):
@@ -59,7 +59,7 @@ def find_length(number):
 my_list = [12,15,16,12,18,16,12,20]
 print(find_length(my_list)) #Output: 8
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #Q6 Write a python program for calulate factorial of n number
 '''
 Using recursive way
@@ -85,7 +85,7 @@ for i in range(1, n+1):
     fact = fact * i
 print(fact) #Output: 720
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #Q7 Write python program for check given number are odd or even
 '''
 Even number: 0,2,4,6,8
@@ -110,7 +110,7 @@ def odd_even1(number):
     
 print(odd_even1(7)) #Output: Odd
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #Q8 Write a python program for reverse an number
 
 def reverse_number(num):
@@ -123,7 +123,7 @@ def reverse_number(num):
 
 print(reverse_number(347)) #Output: 743
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #Q9 Write a python program for remove special charactor from string
 
 def remove_special_char(input_list):
@@ -137,7 +137,7 @@ def remove_special_char(input_list):
 my_list = "@2Krishna21"
 print(remove_special_char(my_list)) #Output: Krishna
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #10 Write a python program for Reverse string
 
 def reverse_string(user_input):
@@ -149,7 +149,7 @@ def reverse_string(user_input):
 name = "Krishna"
 print(reverse_string(name)) #Output: anhsirK
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
 #10 Write a python program for Reverse for Reverse a list
 
 def reverse_list(mylist):
@@ -166,5 +166,18 @@ def reverse_list(mylist):
 my_list = [12,15,16,1,7]
 print(reverse_list(my_list)) #Output: [7, 1, 16, 15, 12]
 
-#-------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------
+#Q11 Here's a Python program that prints prime numbers from 1 to 7 (excluding 7 as the last one):
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2,n):
+        if n % i == 0:
+            return False
+    return True
 
+for num in range(1, 7):  # Iterate from 1 to 6 (excluding 7)
+    if is_prime(num):
+        print(num)
+
+#----------------------------------------------------------------------------------------------------------------------------------
