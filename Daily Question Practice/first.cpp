@@ -20,4 +20,23 @@ int main() {
     return 0;
 }
 
+// --------------------------------------------------------------------------------------------------------------------------------
+// Tower of Hanoi Solution using recursive function
+#include <iostream>
+using namespace std;
+
+void TOH(int n,char BEG, char AUX, char END){
+    if(n>0){
+        TOH(n-1,BEG, END, AUX);
+        cout<<"Move disk "<<n<<" from rod :"<<BEG<<" to rod:"<<END<<endl;
+        TOH(n-1,AUX, BEG, END);
+    }
+}
+
+int main()
+{
+    TOH(3,'A','B','C');
+    return 0;
+}
+
 
