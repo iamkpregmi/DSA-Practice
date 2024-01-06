@@ -181,3 +181,52 @@ for num in range(1, 7):  # Iterate from 1 to 6 (excluding 7)
         print(num)
 
 #----------------------------------------------------------------------------------------------------------------------------------
+# Write a pythn program for fundout occquerance of word in a list
+
+def count_occurrences(words_list):
+    word_count = {}
+    for word in words_list:
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+    return word_count
+
+mylist = ["krishna", "kushal", "Brijesh", "Brijesh", "Krishna", "Brijesh"]
+word_occurrences = count_occurrences(mylist)
+
+print("Occurrences of each word:")
+for word, count in word_occurrences.items():
+    print(f"'{word}': {count} times")
+
+# ----------------------------------------------------------------------------------
+from collections import Counter
+
+mylist = ["krishna", "kushal", "Brijesh", "Brijesh", "Krishna", "Brijesh"]
+word_occurrences = Counter(mylist)
+
+print("Occurrences of each word:")
+for word, count in word_occurrences.items():
+    print(f"'{word}': {count} times")
+
+# ----------------------------------------------------------------------------------
+def count_occurrences(words_str):
+    words_list = words_str.split()  # Split the string into a list of words
+    word_count = {}
+    for word in words_list:
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+    return word_count
+
+input_string = "krishna kushal Brijesh Brijesh Krishna Brijesh"
+word_occurrences = count_occurrences(input_string)
+
+print("Occurrences of each word:")
+for word, count in word_occurrences.items():
+    print(f"'{word}': {count} times")
+
+# ----------------------------------------------------------------------------------
+
+
